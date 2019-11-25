@@ -9,8 +9,8 @@ public final class Driver {
     public static void main(String[] args) {        
         
         BinarySearchTree bst = new BinarySearchTree("Vishwas");
-        // bst.performOrdering("lexicographic");     
-        bst.performOrdering("revLexicographic");     
+        bst.performOrdering("lexicographic");     
+        // bst.performOrdering("revLexicographic");     
         bst.insert("Tanmay");
         bst.insert("Shubham");
         /*bst.insert("3");
@@ -22,10 +22,9 @@ public final class Driver {
         bst.insert("Yash");
         bst.insert("PrakashB");
         bst.insert("Siddhant");
-        bst.insert("Vijay"); 
-        bst.traverse();
+        bst.insert("Vijay");         
         // bst.traverse();
         // bst.performOrdering("lexicographic");
-        System.out.println("");
+        // System.out.println(bst.traverse());
     }
 }
