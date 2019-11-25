@@ -2,12 +2,13 @@ package BinarySearchTree;
 
 public class BinarySearchTree {
     private AbstractNode root; 
-    private InorderNodeVisitor rootVisitor = new InorderNodeVisitor() ;  
+    // private PreorderNodeVisitor rootVisitor = new PreorderNodeVisitor() ;  
+    private Visitor rootVisitor;
     private OrderingStrategy strategy;
     public BinarySearchTree(String key){
         root = new Node(key);
     }
-    
+
     public void insert(String key){
         root.insert(key,strategy);        
     }
@@ -16,13 +17,25 @@ public class BinarySearchTree {
         return root.accept(rootVisitor);
     }
 
-    public void performOrdering(String orderingStrategy){
+    public void setTraversal(String traversal){
+        switch(traversal){
+            case Visitor.INORDER_TRAVERSAL:
+            rootVisitor = new InorderNodeVisitor();
+            break;
+
+            case Visitor.PREORDER_TRAVERSAL:
+            rootVisitor = new PreorderNodeVisitor();
+            break;
+        }
+    }
+    
+    public void setOrdering(String orderingStrategy){
         switch(orderingStrategy){
-            case "lexicographic":
+            case OrderingStrategy.LEXICOGRAPHIC:
             strategy = new LexicographicOrdering();
             break;
 
-            case "revLexicographic":
+            case OrderingStrategy.REVERSED_LEXICOGRAPHIC:
             strategy = new ReverseLexicographicOrdering();
             break;
         }
