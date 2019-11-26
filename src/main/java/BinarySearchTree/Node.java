@@ -1,6 +1,6 @@
 package BinarySearchTree;
 
-public class Node extends AbstractNode implements NodeVisitable{    
+public class Node extends AbstractNode implements Visitable{    
     public Node(String item){
         key = item;
         left = right = new NullNode();
