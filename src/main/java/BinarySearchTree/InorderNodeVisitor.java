@@ -5,9 +5,9 @@ public class InorderNodeVisitor implements Visitor{
         String result ="";
         InorderNodeVisitor visitor = new InorderNodeVisitor();
         result += root.left.accept(visitor);
-        result += root.key+" ";
+        result += " "+root.key+" ";
         result += root.right.accept(visitor);        
-        return result;
+        return result.trim();
     }
     public String visit(NullNode root) {        
         return "";

@@ -8,24 +8,14 @@ public final class Driver {
     }    
     public static void main(String[] args) {        
         
-        BinarySearchTree bst = new BinarySearchTree("Vishwas");
-        bst.setOrdering("lexicographic");
-        bst.setTraversal("Inorder");
-        // bst.performOrdering("revLexicographic");     
-        bst.insert("Tanmay");
-        bst.insert("Shubham");
-        /*bst.insert("3");
-        bst.insert("4");
-        bst.insert("9");*/
-        bst.insert("Pravin");
-        bst.insert("Kavan");
-        bst.insert("ChetanK");
-        bst.insert("Yash");
-        bst.insert("PrakashB");
-        bst.insert("Siddhant");
-        bst.insert("Vijay");         
-        // bst.traverse();
-        // bst.performOrdering("lexicographic");
-        System.out.println(bst.traverse());
+        BinarySearchTree bst = new BinarySearchTree("az");
+        bst.setOrdering("revLexicographic");
+        bst.insert("bb");
+        bst.insert("cz");
+        bst.insert("qt");
+        bst.setTraversal("inorder");                
+        String traversal = bst.traverse();
+        System.out.println("traversal------->>>"+traversal);
+        // System.out.println(bst.traverse());
     }
 }
