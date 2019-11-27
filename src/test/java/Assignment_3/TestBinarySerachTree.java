@@ -63,9 +63,9 @@ public class TestBinarySerachTree {
         bst.setOrdering("revLexicographic");
         bst.insert("bb");
         bst.insert("cz");
-        bst.insert("qt");
+        bst.insert("az");
         bst.setTraversal("inorder");                
         String traversal = bst.traverse();
-        assertEquals(traversal,"bb qt az cz");         
+        assertEquals(traversal,"bb az az cz");         
     }
 }

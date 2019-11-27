@@ -12,10 +12,9 @@ public final class Driver {
         bst.setOrdering("revLexicographic");
         bst.insert("bb");
         bst.insert("cz");
-        bst.insert("qt");
+        bst.insert("az");
         bst.setTraversal("inorder");                
         String traversal = bst.traverse();
-        System.out.println("traversal------->>>"+traversal);
-        // System.out.println(bst.traverse());
+        System.out.println("traversal-------_???"+traversal);
     }
 }
