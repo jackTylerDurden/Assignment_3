@@ -58,7 +58,7 @@ public class TestBinarySerachTree {
     }
 
     @Test
-    public void revLexicographicInorder2() {
+    public void revLexicographicInorderWithDuplicateStrings() {
         BinarySearchTree bst = new BinarySearchTree("az");
         bst.setOrdering("revLexicographic");
         bst.insert("bb");
