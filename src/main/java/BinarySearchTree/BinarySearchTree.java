@@ -1,8 +1,7 @@
 package BinarySearchTree;
 
 public class BinarySearchTree {
-    private AbstractNode root; 
-    // private PreorderNodeVisitor rootVisitor = new PreorderNodeVisitor() ;  
+    private AbstractNode root;
     private Visitor rootVisitor;
     private OrderingStrategy strategy;
     public BinarySearchTree(String key){
